@@ -34,6 +34,8 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta property="og:image" content={db.bg}/>
         <meta property="og:title" content="Alura Quiz Pedro" key="title" />
+        <meta property='og:description' content='Projeto feito durante a imersão React + NextJs da Alura'/>
+        <meta property='og:url' content='https://aluraquiz-base.pmantovani.vercel.app/'/>
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
