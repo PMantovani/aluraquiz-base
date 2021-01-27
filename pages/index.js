@@ -26,6 +26,39 @@ export const QuizContainer = styled.div`
   }
 `;
 
+export const NameInput = styled.input`
+  width: 100%;
+  padding: 7px 0px 7px 15px;
+  background-color: transparent;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  border: 1px solid #a68080;
+  color: white;
+  height: 38px;
+  
+  &::placeholder {
+    color: #a68080;
+  }
+`;
+
+export const SubmitButton = styled.button`
+  width: 100%;
+  margin-top: 25px;
+  height: 38px;
+  border: 0px;
+  color: ${({ theme }) => theme.colors.contrastText};
+  cursor: pointer;
+  
+  &:not(:disabled) {
+      background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  &:disabled {
+    cursor: auto;
+    color: #d9c1c1;
+  }
+
+`;
+
 export default function Home() {
   // let name = 'Pedro';
   const [name, setName] = React.useState('');
@@ -47,15 +80,15 @@ export default function Home() {
               router.push(`/quiz?name=${name}`);
             }}
             >
-              <input
-                placeholder="Seu nome Rockstar"
+              <NameInput
+                placeholder="Seu nome de Rockstar"
                 onChange={(event) => { setName(event.target.value); }}
               />
-              <button type="submit" disabled={name.length === 0}>
+              <SubmitButton type="submit" disabled={name.length === 0}>
                 Mande o seu primeiro acorde
                 {' '}
                 {name}
-              </button>
+              </SubmitButton>
             </form>
           </Widget.Content>
         </Widget>
