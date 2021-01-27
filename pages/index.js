@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
@@ -26,6 +27,10 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  // let name = 'Pedro';
+  const [name, setName] = React.useState('');
+  const router = useRouter();
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
@@ -36,6 +41,22 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
+
+            <form onSubmit={(event) => {
+              event.preventDefault();
+              router.push(`/quiz?name=${name}`);
+            }}
+            >
+              <input
+                placeholder="Seu nome Rockstar"
+                onChange={(event) => { setName(event.target.value); }}
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Mande o seu primeiro acorde
+                {' '}
+                {name}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
 
