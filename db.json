@@ -4,25 +4,27 @@
   "description": "Teste os seus conhecimentos sobre Rock And Roll e vamos ver quantas palhetas você perde por semana.",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://media.giphy.com/media/piO51pySg0LBe/giphy.gif",
+      "title": "Que ano foi lançado é o Black Album do Metallica?",
       "description": "Essa é pra aquecer",
       "answer": 2,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "1987",
+        "1985",
+        "1991",
+        "1983"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "image": "https://media.giphy.com/media/S1yR8E9CIKU0g7UU2M/giphy.gif",
+      "title": "Quem foi o guitarrista do Led Zeppelin?",
+      "description": "Não pode esquecer o guitarrista da lanedária Stairway To Heaven",
+      "answer": 3,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+        "David Gilmour",
+        "Dave Grohl",
+        "Angus Young",
+        "Jimmy Page"
       ]
     }
   ],

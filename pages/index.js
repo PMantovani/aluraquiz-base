@@ -60,7 +60,6 @@ export const SubmitButton = styled.button`
 `;
 
 export default function Home() {
-  // let name = 'Pedro';
   const [name, setName] = React.useState('');
   const router = useRouter();
 
